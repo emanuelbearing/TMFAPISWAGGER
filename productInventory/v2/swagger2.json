@@ -6,7 +6,7 @@
     "version": "2.0",
     "title": "API ProductInventory"
   },
-  "host": "http://env-0693795.jelastic.servint.net",
+  "host": "env-0693795.jelastic.servint.net",
   "basePath": "/DSProductInventory/api/productInventory/v2",
   "schemes": [
       "http"
@@ -16,22 +16,22 @@
   ],
   "produces": [
       "application/json"
-  ],  
-  "paths": {    
-    "/product": {        
+  ],
+  "paths": {
+    "/product": {
     "post": {
       "tags": [
          "product"
-      ],            
+      ],
       "operationId": "productCreate",
       "summary": "productCreate",
-      "description": "",       
+      "description": "",
       "deprecated": false,
       "parameters": [
-      
-                          
-        
-                      
+
+
+
+
         {
          "name": "product",
           "in": "body",
@@ -39,7 +39,7 @@
           "schema": {
             "$ref": "#/definitions/Product"
           }
-        }          
+        }
       ],
       "responses": {
         "201": {
@@ -54,28 +54,28 @@
     "get": {
       "tags": [
          "product"
-      ],          
+      ],
       "operationId": "productFind",
       "summary": "productFind",
-      "description": "",       
+      "description": "",
       "deprecated": false,
-        
-      "parameters": [    
 
-                                  
-        
+      "parameters": [
+
+
+
         {
           "name": "fields",
           "in": "query",
-          "required": false,            
+          "required": false,
           "description": "",
-          
-          "type": "string"                      
-        }    
-  
+
+          "type": "string"
+        }
+
 
       ],
-         
+
       "responses": {
         "200": {
           "description": "List of Product",
@@ -84,75 +84,75 @@
             "items": {
               "$ref": "#/definitions/Product"
             }
-          } 
-        }          
+          }
+        }
       }
     }
-	
-    },    
+
+    },
     "/product/{productId}": {
     "delete": {
       "tags": [
          "product"
-      ],    
+      ],
       "operationId": "productDelete",
       "summary": "productDelete",
       "description": "",
       "deprecated": false,
-        
+
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "productId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
-  
-        
+
+
       ],
-         
+
       "responses": {
         "204": {
           "description": "Success"
-          }  
-      }   
+          }
+      }
     }
 	,
     "get": {
       "tags": [
          "product"
-      ],    
+      ],
       "operationId": "productGet",
       "summary": "productGet",
       "description": "",
       "deprecated": false,
-            
+
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "productId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
   ,
         {
           "name": "fields",
           "in": "query",
-          "required": false,            
+          "required": false,
           "description": "",
-          
-          "type": "string"                      
-        }    
-        
+
+          "type": "string"
+        }
+
 
       ],
-         
+
       "responses": {
         "200": {
           "description": "Product",
@@ -160,29 +160,29 @@
             "$ref": "#/definitions/Product"
             }
           }
-      }        
-    }     
+      }
+    }
 	,
     "patch": {
       "tags": [
          "product"
-      ],            
+      ],
       "operationId": "productPatch",
       "summary": "productPatch",
-      "description": "",      
-      "deprecated": false, 
+      "description": "",
+      "deprecated": false,
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "productId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
   ,
-               
+
         {
          "name": "product",
          "in": "body",
@@ -190,8 +190,8 @@
          "schema": {
            "$ref": "#/definitions/Product"
          }
-        }                               
-      ], 
+        }
+      ],
       "responses": {
         "200": {
           "description": "Success Product",
@@ -199,29 +199,29 @@
             "$ref": "#/definitions/Product"
             }
           }
-      }             
+      }
     }
 	,
     "put": {
       "tags": [
          "product"
-      ],            
+      ],
       "operationId": "productUpdate",
       "summary": "productUpdate",
-      "description": "",      
-      "deprecated": false, 
+      "description": "",
+      "deprecated": false,
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "productId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
   ,
-               
+
         {
          "name": "product",
          "in": "body",
@@ -229,8 +229,8 @@
          "schema": {
            "$ref": "#/definitions/Product"
          }
-        }                               
-      ], 
+        }
+      ],
       "responses": {
         "201": {
           "description": "Success Product",
@@ -238,24 +238,24 @@
             "$ref": "#/definitions/Product"
             }
           }
-      }             
+      }
     }
-	
-    },    
-    "/hub": {        
+
+    },
+    "/hub": {
     "post": {
       "tags": [
          "hub"
-      ],            
+      ],
       "operationId": "hubCreate",
       "summary": "hubCreate",
-      "description": "",       
+      "description": "",
       "deprecated": false,
       "parameters": [
-      
-                          
-        
-                      
+
+
+
+
         {
          "name": "hub",
           "in": "body",
@@ -263,7 +263,7 @@
           "schema": {
             "$ref": "#/definitions/Hub"
           }
-        }          
+        }
       ],
       "responses": {
         "201": {
@@ -278,12 +278,12 @@
     "get": {
       "tags": [
          "hub"
-      ],          
+      ],
       "operationId": "hubFind",
       "summary": "hubFind",
-      "description": "",       
+      "description": "",
       "deprecated": false,
-         
+
       "responses": {
         "200": {
           "description": "List of Hub",
@@ -292,66 +292,66 @@
             "items": {
               "$ref": "#/definitions/Hub"
             }
-          } 
-        }          
+          }
+        }
       }
     }
-	
-    },    
+
+    },
     "/hub/{hubId}": {
     "delete": {
       "tags": [
          "hub"
-      ],    
+      ],
       "operationId": "hubDelete",
       "summary": "hubDelete",
       "description": "",
       "deprecated": false,
-        
+
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "hubId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
-  
-        
+
+
       ],
-         
+
       "responses": {
         "204": {
           "description": "Success"
-          }  
-      }   
+          }
+      }
     }
 	,
     "get": {
       "tags": [
          "hub"
-      ],    
+      ],
       "operationId": "hubGet",
       "summary": "hubGet",
       "description": "",
       "deprecated": false,
-            
+
       "parameters": [
-      
-                                  
-            
+
+
+
         {
           "name": "hubId",
           "in": "path",
-          "required": true,            
+          "required": true,
           "type": "string"
         }
-        
+
 
       ],
-         
+
       "responses": {
         "200": {
           "description": "Hub",
@@ -359,49 +359,49 @@
             "$ref": "#/definitions/Hub"
             }
           }
-      }        
-    }     
-	
+      }
+    }
+
     }
   },
 "definitions": {
-  
+
 
     "Product": {
-            
+
       "required": [
-      
+
         "status"
       ],
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "integer",
           "format": "int64"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
         ,
         "name": {
-          
+
           "type": "string"
         }
         ,
         "description": {
-          
+
           "type": "string"
         }
         ,
         "status": {
-          
-          "type": "string",    
-          "enum": [   
-          
+
+          "type": "string",
+          "enum": [
+
             "Created",
             "Pending_active",
             "Aborted",
@@ -411,491 +411,490 @@
             "Terminated",
             "Suspended"
           ]
-  
+
         }
         ,
         "isCustomerVisible": {
-          
+
           "type": "string"
         }
         ,
         "isBundle": {
-          
+
           "type": "string"
         }
         ,
         "productSerialNumber": {
-          
+
           "type": "string"
         }
         ,
         "startDate": {
-          
+
           "type": "string",
           "format": "date-time"
         }
         ,
         "orderDate": {
-          
+
           "type": "string",
           "format": "date-time"
         }
         ,
         "terminationDate": {
-          
+
           "type": "string",
           "format": "date-time"
         }
         ,
         "place": {
-          
+
           "type": "string"
         }
         ,
         "productOffering": {
-          
+
                 "$ref": "#/definitions/ProductOffering"
-  
+
         }
         ,
         "productSpecification": {
-          
+
                 "$ref": "#/definitions/ProductSpecification"
-  
+
         }
         ,
         "productCharacteristic": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/ProductCharacteristic"
-  
+
               }
-            
+
         }
         ,
         "productRelationship": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/ProductRelationship"
-  
+
               }
-            
+
         }
         ,
         "billingAccount": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/BillingAccount"
-  
+
               }
-            
+
         }
         ,
         "relatedParty": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/RelatedParty"
-  
+
               }
-            
+
         }
         ,
         "realizingResource": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/RealizingResource"
-  
+
               }
-            
+
         }
         ,
         "realizingService": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/RealizingService"
-  
+
               }
-            
+
         }
         ,
         "productPrice": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/ProductPrice"
-  
+
               }
-            
+
         }
         ,
         "agreement": {
-          
+
               "type": "array",
               "items": {
-                  
+
                 "$ref": "#/definitions/Agreement"
-  
+
               }
-            
+
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductSpecification": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "BillingAccount": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
         ,
         "name": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "RealizingService": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "RealizingResource": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductOffering": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
         ,
         "name": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "Price": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "amount": {
-          
+
           "type": "number",
           "format": "float"
         }
         ,
         "currency": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductPrice": {
-            
+
       "required": [
-      
+
         "price",
         "validFor"
       ],
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "name": {
-          
+
           "type": "string"
         }
         ,
         "description": {
-          
+
           "type": "string"
         }
         ,
         "priceType": {
-          
+
           "type": "string"
         }
         ,
         "recurringChargePeriod": {
-          
+
           "type": "string"
         }
         ,
         "unitOfMeasure": {
-          
+
           "type": "string"
         }
         ,
         "price": {
-          
+
                 "$ref": "#/definitions/Price"
-  
+
         }
         ,
         "validFor": {
-          
+
                 "$ref": "#/definitions/TimePeriod"
-  
+
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductRelationship": {
-            
+
       "required": [
-      
+
         "product"
       ],
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "type": {
-          
+
           "type": "string"
         }
         ,
         "product": {
-          
+
                 "$ref": "#/definitions/ProductRef"
-  
+
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductRef": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "ProductCharacteristic": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "name": {
-          
+
           "type": "string"
         }
         ,
         "value": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "Agreement": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "herf": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "RelatedParty": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "role": {
-          
+
           "type": "string"
         }
         ,
         "href": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
+
   ,
 
     "TimePeriod": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "startDateTime": {
-          
+
           "type": "string",
           "format": "date-time"
         }
         ,
         "endDateTime": {
-          
+
           "type": "string",
           "format": "date-time"
         }
-        
+
       }
     }
-                
+
   ,
 
     "Hub": {
-      
+
       "type": "object",
-      "properties": {      
-      
+      "properties": {
+
         "id": {
-          
+
           "type": "string"
         }
         ,
         "callback": {
-          
+
           "type": "string"
         }
         ,
         "query": {
-          
+
           "type": "string"
         }
-        
+
       }
     }
-                
-  
+
+
   }
 }
-	
